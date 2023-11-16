@@ -1,0 +1,95 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 84vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-card {
+  flex-basis: calc(30% - 20px); /* Adjust as needed */
+  margin-bottom: 50px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.product-title,
+.product-description,
+.product-price,
+.product-rating {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+/* ProductList.css */
+
+.product-rating {
+  color: #ffc107; /* Yellow color for stars, adjust as needed */
+  font-weight: bold;
+  font-size: 20px; /* Adjust as needed */
+  display: flex;
+}
+
+.star {
+  margin-right: 2px; /* Adjust the spacing between stars */
+  margin-bottom: 20px;
+}
+
+.wishlist-button {
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pagination-buttons button {
+  background-color: #333333;
+  color: #fff;
+  border: 1px solid #333333;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination-buttons button:hover {
+  background-color: #808080;
+  border-color: #808080;
+}
+
+.no-items-found {
+  font-size: 28px;
+  font-weight: 800;
+}

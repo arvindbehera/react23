@@ -1,19 +1,30 @@
 import { useState } from "react";
+import { ProductProvider } from "./ProductContext";
+import ProductList from "./ProductList";
+import CategorySearch from "./CategorySearch";
+import Header from "./Header";
+import Footer4Columns from "./Footer4Columns";
+import Footer2Columns from "./Footer2Columns";
 import "./App.css";
+import Banner from "./Banner";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
 
   return (
-    <>
-      <h1>React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <ProductProvider>
+      <Header onSearch={handleSearch} />
+      <Banner />
+      <CategorySearch />
+      <ProductList searchTerm={searchTerm} />
+      <Footer4Columns />
+      <Footer2Columns />
+    </ProductProvider>
   );
-}
+};
 
 export default App;
