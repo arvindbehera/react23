@@ -1,4 +1,3 @@
-// Banner.js
 import "./Banner.css";
 
 const Banner = () => {

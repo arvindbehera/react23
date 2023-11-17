@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { ProductProvider } from "./ProductContext";
-import ProductList from "./ProductList";
-import CategorySearch from "./CategorySearch";
-import Header from "./Header";
-import Banner from "./Banner";
-import Footer from "./Footer";
+import { ProductProvider } from "./contexts/ProductContext";
+import Header from "./components/Header/Header.jsx";
+import Banner from "./components/Banner/Banner.jsx";
+import ProductList from "./components/ProductList/ProductList.jsx";
+import CategorySearch from "./components/CategorySearch/CategorySearch.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
 const App = () => {

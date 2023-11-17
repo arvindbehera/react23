@@ -8,7 +8,7 @@
 }
 
 .product-card {
-  flex-basis: calc(25% - 20px); /* Adjust as needed */
+  flex-basis: calc(25% - 20px);
   margin-bottom: 50px;
   text-align: center;
   border-radius: 15px;
@@ -41,17 +41,15 @@
   font-weight: bold;
 }
 
-/* ProductList.css */
-
 .product-rating {
-  color: #ffc107; /* Yellow color for stars, adjust as needed */
+  color: #ffc107;
   font-weight: bold;
-  font-size: 20px; /* Adjust as needed */
+  font-size: 20px;
   display: flex;
 }
 
 .star {
-  margin-right: 2px; /* Adjust the spacing between stars */
+  margin-right: 2px;
   margin-bottom: 20px;
 }
 
@@ -93,6 +91,6 @@
 }
 
 .pagination-buttons button.current-page {
-  background-color: #3f3f3f; /* Adjust color for the current page */
+  background-color: #3f3f3f;
   color: white;
 }

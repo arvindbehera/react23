@@ -4,7 +4,6 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer-container">
-      {/* First Row */}
       <div className="footer-row">
         <div className="footer-column">
           <h4 className="footer-menu-heding">Company Info</h4>
@@ -61,7 +60,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Second Row */}
       <div className="footer-row">
         <div className="footer-column">
           <p className="footer-copyright">2010-2022 All Right Reserved</p>

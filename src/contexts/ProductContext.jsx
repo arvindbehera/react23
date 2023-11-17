@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */ // ProductContext.js
+/* eslint-disable react/prop-types */
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 

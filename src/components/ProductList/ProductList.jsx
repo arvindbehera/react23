@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useContext, useState } from "react";
-import { ProductContext } from "./ProductContext";
+import { ProductContext } from "../../contexts/ProductContext";
 import "./ProductList.css";
 
 const ProductList = ({ searchTerm }) => {
