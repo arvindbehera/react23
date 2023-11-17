@@ -70,8 +70,6 @@ const ProductList = ({ searchTerm }) => {
     currentPage !== 1 && setCurrentPage(currentPage - 1);
   };
 
-  console.log(pages);
-
   return (
     <div>
       <div className="product-list">
@@ -101,13 +99,22 @@ const ProductList = ({ searchTerm }) => {
         )}
       </div>
       <div className="pagination-buttons">
-        <button onClick={handlePrevPostPage}>Previous</button>
+        <button onClick={handlePrevPostPage} disabled={currentPage === 1}>
+          Previous
+        </button>
         {pages.map((item, i) => (
-          <button key={i} onClick={() => setCurrentPage(item)}>
+          <button
+            key={i}
+            onClick={() => setCurrentPage(item)}
+            className={currentPage === item ? "current-page" : ""}>
             {item}
           </button>
         ))}
-        <button onClick={handleNextPostPage}>Next</button>
+        <button
+          onClick={handleNextPostPage}
+          disabled={currentPage === pages.length}>
+          Next
+        </button>
       </div>
     </div>
   );

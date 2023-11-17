@@ -3,10 +3,9 @@ import { ProductProvider } from "./ProductContext";
 import ProductList from "./ProductList";
 import CategorySearch from "./CategorySearch";
 import Header from "./Header";
-import Footer4Columns from "./Footer4Columns";
-import Footer2Columns from "./Footer2Columns";
-import "./App.css";
 import Banner from "./Banner";
+import Footer from "./Footer";
+import "./App.css";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,8 +20,7 @@ const App = () => {
       <Banner />
       <CategorySearch />
       <ProductList searchTerm={searchTerm} />
-      <Footer4Columns />
-      <Footer2Columns />
+      <Footer />
     </ProductProvider>
   );
 };

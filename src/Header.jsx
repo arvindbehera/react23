@@ -20,9 +20,14 @@ const Header = ({ onSearch, onClear }) => {
     onClear();
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleSearch();
+  const handleInputChange = (e) => {
+    const searchTerm = e.target.value;
+    setLocalSearchTerm(searchTerm);
+    if (searchTerm.length >= 4) {
+      setError("");
+      onSearch(searchTerm.toLowerCase());
+    } else {
+      setError("Enter 4 characters!");
     }
   };
 
@@ -36,8 +41,7 @@ const Header = ({ onSearch, onClear }) => {
             id="searchInput"
             placeholder="What do you want to buy today?"
             value={localSearchTerm}
-            onChange={(e) => setLocalSearchTerm(e.target.value)}
-            onKeyDown={handleKeyDown}
+            onChange={handleInputChange}
             className="search-input"
           />
           {localSearchTerm && (

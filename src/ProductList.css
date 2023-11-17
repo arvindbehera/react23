@@ -8,7 +8,7 @@
 }
 
 .product-card {
-  flex-basis: calc(30% - 20px); /* Adjust as needed */
+  flex-basis: calc(25% - 20px); /* Adjust as needed */
   margin-bottom: 50px;
   text-align: center;
   border-radius: 15px;
@@ -19,7 +19,7 @@
 
 .product-image {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
@@ -71,25 +71,28 @@
 
 .pagination-buttons {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: right;
+  margin-bottom: 35px;
+  width: 90vw;
 }
 
 .pagination-buttons button {
-  background-color: #333333;
-  color: #fff;
-  border: 1px solid #333333;
   padding: 8px 16px;
   margin: 0 5px;
   cursor: pointer;
-}
-
-.pagination-buttons button:hover {
-  background-color: #808080;
-  border-color: #808080;
+  font-size: 18px;
 }
 
 .no-items-found {
   font-size: 28px;
   font-weight: 800;
+}
+
+.pagination-buttons button:disabled {
+  cursor: not-allowed;
+}
+
+.pagination-buttons button.current-page {
+  background-color: #3f3f3f; /* Adjust color for the current page */
+  color: white;
 }
