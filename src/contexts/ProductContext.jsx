@@ -15,13 +15,13 @@ const ProductProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const productsResponse = await axios.get(
-          "https://dummyjson.com/products"
+          "https://api.escuelajs.co/api/v1/products"
         );
         const categoriesResponse = await axios.get(
-          "https://dummyjson.com/products/categories"
+          "https://api.escuelajs.co/api/v1/categories"
         );
 
-        setProducts(productsResponse.data.products);
+        setProducts(productsResponse.data);
         setCategories(categoriesResponse.data);
         setLoading(false);
       } catch (error) {

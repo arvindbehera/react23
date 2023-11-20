@@ -8,16 +8,21 @@ const ProductList = ({ searchTerm }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(12);
 
+  /* const image = products.images.map((img) => {
+    return img;
+  }); */
+
   if (loading) {
     return <div>Loading...</div>;
   }
 
   const filteredProducts = products.filter(
     (product) =>
-      (selectedCategory === "All" || product.category === selectedCategory) &&
+      (selectedCategory === "All" ||
+        product.category.name === selectedCategory) &&
       (searchTerm === "" ||
         product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.category.toLowerCase().includes(searchTerm.toLowerCase()))
+        product.category.name.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   const lastIndexOfPosts = currentPage * postPerPage;
@@ -79,7 +84,7 @@ const ProductList = ({ searchTerm }) => {
           currentPosts.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={product.thumbnail}
+                src={product.images.map((img) => img)}
                 alt={product.title}
                 className="product-image"
               />

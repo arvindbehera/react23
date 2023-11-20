@@ -6,8 +6,8 @@ const CategorySearch = () => {
   const { categories, setSelectedCategory, setSearchTerm, products } =
     useContext(ProductContext);
 
-  const availableCategories = categories.filter((category) =>
-    products.some((product) => product.category === category)
+  const availableCategories = categories.filter((cat) =>
+    products.some((product) => product.category.name === cat.name)
   );
 
   const handleCategoryChange = (event) => {
@@ -29,8 +29,8 @@ const CategorySearch = () => {
           className="category-options">
           <option value="All">Select Category</option>
           {availableCategories.map((category) => (
-            <option key={category} value={category}>
-              {category}
+            <option key={category.name} value={category.name}>
+              {category.name}
             </option>
           ))}
         </select>
